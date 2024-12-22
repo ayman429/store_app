@@ -41,10 +41,11 @@ class HomePage extends StatelessWidget {
               },
             ),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, AppRoutes.testPage);
-                },
-                child: const Text("Go to Test Page")),
+              onPressed: () async {
+                Navigator.pushNamed(context, AppRoutes.productsHome);
+              },
+              child: const Text("Go to  ProductsHome Page"),
+            ),
           ],
         ),
       ),

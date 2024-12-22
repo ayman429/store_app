@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../features/products/presentation/views/products_home.dart';
 import '../presentation/home_page.dart';
 import '../presentation/test_page.dart';
 
 class AppRoutes {
   static const String homePage = '/';
   static const String testPage = '/testPage';
+  static const String productsHome = '/ProductsHome';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // print('Routes Data : ${settings.arguments}');
@@ -19,7 +21,10 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => const TestPage(),
         );
-
+      case productsHome:
+        return MaterialPageRoute(
+          builder: (context) => const ProductsHome(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => const HomePage(),

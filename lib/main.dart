@@ -8,11 +8,13 @@ import 'util/routes.dart';
 import 'core/cubits/app_theme_cubit/app_theme_cubit.dart';
 import 'core/cubits/localization_cubit/localization_cubit.dart';
 import 'core/cubits/shared_pref.dart';
+import 'util/service_locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   sharedPreferences = await SharedPreferences.getInstance();
+  setupServiceLocator();
   runApp(const MyApp());
 }
 
