@@ -8,4 +8,6 @@ abstract class ProductsRepo {
   Future<Either<Failure, List<dynamic>>> getAllCategories();
   Future<Either<Failure, List<Product>>> getCategories(
       {required String categoryName});
+
+  Future<Either<Failure, Product>> addProduct({required Product product});
 }

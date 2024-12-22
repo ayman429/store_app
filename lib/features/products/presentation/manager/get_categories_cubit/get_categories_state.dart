@@ -12,7 +12,7 @@ final class GetCategoriesInitial extends GetCategoriesState {}
 final class GetCategoriesLoading extends GetCategoriesState {}
 
 final class GetCategoriesSuccess extends GetCategoriesState {
-  final List<dynamic> categories;
+  final List<Product> categories;
 
   const GetCategoriesSuccess(this.categories);
 }

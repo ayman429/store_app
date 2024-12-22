@@ -41,7 +41,7 @@ class ShowCategories extends StatelessWidget {
             itemBuilder: (context, index) {
               final categories = state.categories[index];
               return ListTile(
-                title: Text(categories.title),
+                title: Text(categories.title ?? ""),
                 subtitle: Text(categories.price.toString()),
               );
             },

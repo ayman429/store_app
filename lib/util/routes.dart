@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../features/products/presentation/views/add_product.dart';
 import '../features/products/presentation/views/all_categories.dart';
 import '../features/products/presentation/views/categories.dart';
 import '../features/products/presentation/views/products_home.dart';
@@ -12,6 +13,7 @@ class AppRoutes {
   static const String productsHome = '/ProductsHome';
   static const String allCategories = '/AllCategories';
   static const String categories = '/Categories';
+  static const String addProduct = '/AddProduct';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // print('Routes Data : ${settings.arguments}');
@@ -36,6 +38,10 @@ class AppRoutes {
       case categories:
         return MaterialPageRoute(
           builder: (context) => const Categories(),
+        );
+      case addProduct:
+        return MaterialPageRoute(
+          builder: (context) => const AddProduct(),
         );
       default:
         return MaterialPageRoute(

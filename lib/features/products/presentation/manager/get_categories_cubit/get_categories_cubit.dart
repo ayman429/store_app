@@ -2,6 +2,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
+import '../../../data/models/product/product.dart';
 import '../../../data/repos/products_repo.dart';
 
 part 'get_categories_state.dart';
