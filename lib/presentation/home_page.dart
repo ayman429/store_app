@@ -44,7 +44,19 @@ class HomePage extends StatelessWidget {
               onPressed: () async {
                 Navigator.pushNamed(context, AppRoutes.productsHome);
               },
-              child: const Text("Go to  ProductsHome Page"),
+              child: const Text("Go to ProductsHome Page"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                Navigator.pushNamed(context, AppRoutes.allCategories);
+              },
+              child: const Text("Go to allCategories Page"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                Navigator.pushNamed(context, AppRoutes.categories);
+              },
+              child: const Text("Go to Categories Page"),
             ),
           ],
         ),
