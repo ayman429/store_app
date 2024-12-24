@@ -103,4 +103,27 @@ class ProductsRepoImpl extends ProductsRepo {
       );
     }
   }
+
+  @override
+  Future<Either<Failure, Product>> updateProduct(
+      {required Product product}) async {
+    try {
+      final response = await apiService.put(
+          endPoint: 'products/${product.id}', data: product.toJson());
+      // print("response = $response");
+      return Right(Product.fromJson(response.data));
+    } catch (e) {
+      // print('error : $e');
+      if (e is DioError) {
+        return left(
+          ServerFailure.fromDioError(e),
+        );
+      }
+      return left(
+        ServerFailure(
+          e.toString(),
+        ),
+      );
+    }
+  }
 }

@@ -10,4 +10,5 @@ abstract class ProductsRepo {
       {required String categoryName});
 
   Future<Either<Failure, Product>> addProduct({required Product product});
+  Future<Either<Failure, Product>> updateProduct({required Product product});
 }

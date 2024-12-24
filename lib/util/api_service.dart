@@ -23,4 +23,10 @@ class ApiService {
     var response = await _dio.post(endPoint, data: data);
     return response;
   }
+
+  Future<Response<dynamic>> put(
+      {required String endPoint, required Map<String, dynamic> data}) async {
+    var response = await _dio.put(endPoint, data: data);
+    return response;
+  }
 }
